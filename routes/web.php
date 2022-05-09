@@ -13,7 +13,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/login', function () {
+Route::get('/', function () {
     return view('login');
 });
 Route::post('/login',[\App\Http\Controllers\UserController::class,'login']);
+
+Route::get('/product',[\App\Http\Controllers\ProductController::class,'index']);
